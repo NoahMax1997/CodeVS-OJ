@@ -1,0 +1,85 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "remove",
+            "command": "rm",
+            "args": [
+                "*.exe",
+                "${fileDirname}"
+            ]
+        },
+        {
+            "label": "compile",
+            "command": "g++",
+            "args": [
+                "-g",
+                "${file}",
+                "-o",
+                "${fileDirname}/${fileBasenameNoExtension}.exe"
+            ],
+            "problemMatcher": {
+                "owner": "cpp",
+                "fileLocation": [
+                    "relative",
+                    "${workspaceRoot}"
+                ],
+                "pattern": {
+                    "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
+                    "file": 1,
+                    "line": 2,
+                    "column": 3,
+                    "severity": 4,
+                    "message": 5
+                }
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "type": "shell",
+            "label": "C/C++: g++.exe build active file",
+            "command": "D:\\MinGW\\bin\\g++.exe",
+            "args": [
+                "-g",
+                "${file}",
+                "-o",
+                "${fileDirname}\\${fileBasenameNoExtension}.exe"
+            ],
+            "options": {
+                "cwd": "D:\\MinGW\\bin"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": "build"
+        },
+        {
+            "label": "archieve",
+            "dependsOn": [
+                "remove",
+                "compile"
+            ]
+        },
+        {
+            "type": "shell",
+            "label": "C/C++: cpp.exe build active file",
+            "command": "D:\\MinGW\\bin\\cpp.exe",
+            "args": [
+                "-g",
+                "${file}",
+                "-o",
+                "${fileDirname}\\${fileBasenameNoExtension}.exe"
+            ],
+            "options": {
+                "cwd": "D:\\MinGW\\bin"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": "build"
+        }
+    ]
+}
