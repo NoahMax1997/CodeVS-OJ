@@ -16,7 +16,7 @@
                 "-g",
                 "${file}",
                 "-o",
-                "${fileDirname}/${fileBasenameNoExtension}.exe"
+                "${fileDirname}/the_only_one.exe"
             ],
             "problemMatcher": {
                 "owner": "cpp",
@@ -46,7 +46,7 @@
                 "-g",
                 "${file}",
                 "-o",
-                "${fileDirname}\\${fileBasenameNoExtension}.exe"
+                "${fileDirname}\\the_only_one.exe"
             ],
             "options": {
                 "cwd": "D:\\MinGW\\bin"
@@ -71,7 +71,7 @@
                 "-g",
                 "${file}",
                 "-o",
-                "${fileDirname}\\${fileBasenameNoExtension}.exe"
+                "${fileDirname}\\the_only_one.exe"
             ],
             "options": {
                 "cwd": "D:\\MinGW\\bin"

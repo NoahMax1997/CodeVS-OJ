@@ -6,7 +6,7 @@
             "type": "cppdbg", // 配置类型，这里只能为cppdbg
             "request": "launch", // 请求配置类型，可以为launch（启动）或attach（附加）
             "targetArchitecture": "x86", // 生成目标架构，一般为x86或x64，可以为x86, arm, arm64, mips, x64, amd64, x86_64
-            "program": "${fileDirname}/${fileBasenameNoExtension}.exe", // 将要进行调试的程序的路径
+            "program": "${fileDirname}/the_only_one.exe", // 将要进行调试的程序的路径
             "miDebuggerPath": "D:\\MinGW\\bin\\gdb.exe", // miDebugger的路径，注意这里要与MinGw的路径对应
             "args": [
                 
